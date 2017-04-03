@@ -1,0 +1,49 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  overflow-y: scroll;
+  font-family: $font-body--regular;
+}
+
+h1, h2, h3, h4, h5, h6, hr {
+  margin: 0;
+  padding: 0;
+}
+
+small, .small {
+  font-size: inherit
+}
+
+img {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgba(color('shades', 'black'), .2);
+  border-radius: 20px;
+}
+
+::-webkit-scroll-thumb {
+  background-color: green;
+}
+
+// ::-webkit-scroll-track {
+//   background-color: green;
+// }
+
+::-webkit-scrollbar-track-piece {
+  background-color: green;
+}
+
+.h1 {
+
+}

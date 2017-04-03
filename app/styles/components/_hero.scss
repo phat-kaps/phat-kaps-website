@@ -1,0 +1,54 @@
+.c-hero {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &_logo {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      max-width: 162px;
+      object-fit: contain;
+    }
+  }
+
+  &_title {
+    @include responsive-font(10vw, 20px, 128px);
+
+    flex: 1 0 auto;
+    margin-top: 46px;
+    color: color('shades', 'white');
+    font-family: $font-heading;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &_hr {
+    border: 0;
+    margin: auto;
+    width: 40%;
+    max-width: 170px;
+    height: 4px;
+    background-color: color('shades', 'white');
+  }
+
+
+  &_subtitle {
+    flex: 1 0 auto;
+    margin-top: 45px;
+    font-size: 16px;
+    color: color('shades', 'white');
+    font-family: $font-body--semibold;
+  }
+
+  &_scroll-down-button {
+    flex: 0 0 auto;
+  }
+}

@@ -1,0 +1,14 @@
+.l-contact-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &_header {}
+
+  &_body {
+    margin-top: 60px;
+    flex: 1 0 auto;
+  }
+}

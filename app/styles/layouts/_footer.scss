@@ -1,0 +1,17 @@
+.l-footer {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+  background-color: color('shades', 'background');
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 14px;
+
+  &_section {
+    flex: 1 1 50%;
+  }
+
+  &_right {
+  }
+}

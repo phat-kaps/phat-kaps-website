@@ -1,0 +1,60 @@
+.c-contact-panels {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .c-contact-panel {
+    flex: 1 0 33.33%;
+    margin-bottom: 40px;
+    min-width: 150px;
+    // margin-left: 10px;
+    display: flex;
+    justify-content: center;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    // layout
+    &_first-section {
+
+    }
+
+    &_last-section {
+      flex: 1 0 auto;
+      padding-top: 5px;
+      margin-left: 30px;
+    }
+
+    // elements
+    &_title {
+      color: color('brown', 'lighten-1');
+      font-size: 18px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: $font-heading;
+    }
+
+    &_body {
+      margin-top: 26px;
+      font-size: 14px;
+    }
+
+    &_mail-link {
+      display: block;
+      width: 100%;
+      color: color('shades', 'white');
+    }
+
+    &_icon {
+      width: 42px;
+      fill: color('shades', 'white');
+
+      svg {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -3,7 +3,10 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "ress": "^1.2.2",
+    "font-awesome": "^4.7.0",
+    "mdi": "^1.8.36"
   },
   "overrides": {
     "bootstrap-sass": {
