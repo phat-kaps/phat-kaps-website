@@ -5,6 +5,9 @@ const browserSync = require('browser-sync').create();
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
+const gutil = require('gulp-util');
+const ftp = require('gulp-ftp');
+const env = require('gulp-env');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -166,4 +169,19 @@ gulp.task('default', () => {
     dev = false;
     runSequence(['clean', 'wiredep'], 'build', resolve);
   });
+});
+
+gulp.task('deploy', function () {
+    env('.env');
+    return gulp.src('dist/**/*')
+        .pipe(ftp({
+            host: 'ftp.phatkaps.co.za',
+            user: process.env.FTP_USER,
+            pass: process.env.FTP_PASS,
+            remotePath: 'public_html'
+        }))
+        // you need to have some kind of stream after gulp-ftp to make sure it's flushed
+        // this can be a gulp plugin, gulp.dest, or any kind of stream
+        // here we use a passthrough stream
+        .pipe(gutil.noop());
 });
