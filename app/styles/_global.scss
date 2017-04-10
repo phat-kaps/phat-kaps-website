@@ -1,19 +1,12 @@
 html,
 body {
-  height: 100%;
-  overflow: hidden;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 body {
-  overflow-y: scroll;
   font-family: $font-body--regular;
 }
 
-h1, h2, h3, h4, h5, h6, hr {
+h1, h2, h3, h4, h5, h6, hr, p {
   margin: 0;
   padding: 0;
 }
@@ -27,23 +20,21 @@ img {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  background-color: rgba(color('shades', 'black'), .2);
+  width: 1vw;
   border-radius: 20px;
+  border: 1px solid color('shades', 'black');
+  background-color: green;
 }
 
 ::-webkit-scroll-thumb {
-  background-color: green;
+  background-color: pink;
 }
 
-// ::-webkit-scroll-track {
-//   background-color: green;
-// }
+::-webkit-scroll-track {
+  background-color: yellow;
+}
 
 ::-webkit-scrollbar-track-piece {
-  background-color: green;
-}
-
-.h1 {
-
+  width: 1vw;
+  background-color: orange;
 }

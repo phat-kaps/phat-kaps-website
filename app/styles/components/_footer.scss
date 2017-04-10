@@ -1,0 +1,13 @@
+.c-footer {
+  width: 100%;
+  background-color: color('brown', 'base');
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &_section {
+    flex: 1 1 auto;
+    color: color('shades', 'white');
+  }
+}

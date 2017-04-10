@@ -1,3 +1,13 @@
 .c-btn-scroll-down {
+  display: block;
   width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  fill: color('shades', 'white');
+  border: 1px solid color('shades', 'white');
+
+  svg {
+    width: 100%;
+  }
 }
