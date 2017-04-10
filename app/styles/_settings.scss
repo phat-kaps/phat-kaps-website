@@ -2,3 +2,9 @@ $font-heading: bebasneue, verdana, arial;
 $font-body--regular: open_sansregular, verdana, arial;
 $font-body--semibold: open_sanssemibold, verdana, arial;
 $font-body--bold: open_sansbold, verdana, arial;
+
+$breakpoints: (
+  'small'  : ( min-width:  767px ),
+  'medium' : ( min-width:  992px ),
+  'large'  : ( min-width: 1200px )
+);
