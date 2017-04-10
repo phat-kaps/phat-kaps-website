@@ -18,23 +18,3 @@ small, .small {
 img {
   width: 100%;
 }
-
-::-webkit-scrollbar {
-  width: 1vw;
-  border-radius: 20px;
-  border: 1px solid color('shades', 'black');
-  background-color: green;
-}
-
-::-webkit-scroll-thumb {
-  background-color: pink;
-}
-
-::-webkit-scroll-track {
-  background-color: yellow;
-}
-
-::-webkit-scrollbar-track-piece {
-  width: 1vw;
-  background-color: orange;
-}
