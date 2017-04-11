@@ -1,0 +1,21 @@
+$grey: (
+  'base': #454443
+);
+
+$brown: (
+  'base': #ae895d,
+  'lighten-1': #dbaf75
+);
+
+$shades: (
+  'black':        #000,
+  'white':        #fff,
+  'transparent':  transparent,
+  'background': map-get($brown, 'base')
+);
+
+$colors: (
+  'brown': $brown,
+  'shades': $shades,
+  'grey': $grey
+);

@@ -18,3 +18,7 @@ small, .small {
 img {
   width: 100%;
 }
+
+button:focus {
+  outline: none;
+}

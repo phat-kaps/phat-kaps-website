@@ -1,0 +1,72 @@
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@each $color-name, $color in $colors {
+  @each $color-type, $color-value in $color {
+    @if $color-type == 'base' {
+      .u-color-#{$color-name}-bg {
+        background-color: $color-value;
+      }
+
+      .u-color-#{$color-name}-txt {
+        color: $color-value;
+      }
+    } @else if $color-name != 'shades' {
+      .u-color-#{$color-name}-bg.#{$color-type} {
+        background-color: $color-value;
+      }
+
+      .u-color-#{$color-name}-txt.#{$color-type} {
+        color: $color-value;
+      }
+    }
+  }
+}
+
+// Shade classes
+@each $color, $color-value in $shades {
+  .u-color-#{$color}-bg {
+    background-color: $color-value;
+  }
+
+  .u-color-#{$color}-txt {
+    color: $color-value;
+  }
+}
+
+
+// usage: color('name_of_color', "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr-color: map-get($colors, $color);
+
+    @if map-has-key($curr-color, $type) {
+      @return map-get($curr-color, $type);
+    }
+  }
+
+  @warn "Unknown `#{name}` in $colors.";
+  @return null;
+}
