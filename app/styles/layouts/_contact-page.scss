@@ -9,5 +9,9 @@
 
   &_body {
     width: 100%;
+
+    @include respond-to(medium) {
+      padding-left: 10%;
+    };
   }
 }

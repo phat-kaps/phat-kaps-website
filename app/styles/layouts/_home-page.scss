@@ -1,0 +1,16 @@
+.l-home-page {
+  // padding-bottom: 6vh;
+
+  &_first-section {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // flex: 1 1 auto;
+  }
+
+  &_last-section {
+    flex: 0 0 40px;
+    margin: auto auto 1vh;
+  }
+}

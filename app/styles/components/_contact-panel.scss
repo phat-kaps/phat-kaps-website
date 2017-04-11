@@ -6,6 +6,10 @@
   margin-top: 5vh;
   margin-bottom: 7vh;
 
+  @media (min-height: 700px) {
+    margin-top: 0;
+  }
+
   .c-contact-panel {
     flex: 1 0 100%;
     margin-bottom: 2vh;
@@ -52,6 +56,7 @@
 
     // elements
     &_title {
+      // display: inline;
       color: color('brown', 'lighten-1');
       font-size: 18px;
       letter-spacing: 1px;
@@ -60,6 +65,7 @@
     }
 
     &_body {
+      // display: inline;
       margin-top: 26px;
       font-size: 14px;
       color: color('shades', 'white');
@@ -69,6 +75,20 @@
       display: block;
       width: 100%;
       color: color('shades', 'white');
+      text-decoration: none;
+
+      &:hover {
+        color: color('brown', 'base');
+      }
+    }
+
+    &_phone-link {
+      color: color('shades', 'white');
+      text-decoration: none;
+
+      &:hover {
+        color: color('brown', 'base');
+      }
     }
 
     &_icon {

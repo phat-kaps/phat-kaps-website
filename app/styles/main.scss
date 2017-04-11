@@ -1,16 +1,11 @@
-$icon-font-path: '../fonts/';
-
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "bower_components/font-awesome/scss/font-awesome.scss";
-@import "bower_components/mdi/scss/materialdesignicons.scss";
 // endbower
 
-@import 'fonts';
-@import 'colors';
-@import 'settings';
-@import 'mixins';
-@import 'global';
+@import 'abstracts/fonts';
+@import 'abstracts/colours';
+@import 'abstracts/settings';
+@import 'abstracts/mixins';
+@import 'abstracts/global';
 @import 'layouts/app';
 @import 'layouts/page';
 @import 'layouts/contact-page';

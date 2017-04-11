@@ -6,6 +6,13 @@
   align-items: center;
   fill: color('shades', 'white');
   border: 1px solid color('shades', 'white');
+  transition: fill 500ms ease 100ms, border-color 500ms ease, transform 500ms ease;
+
+  &:hover {
+    fill: color('grey', 'base');
+    border-color: color('grey', 'base');
+    transform: scale(1.2);
+  }
 
   svg {
     width: 100%;
